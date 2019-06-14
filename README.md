@@ -1,6 +1,12 @@
 # Inventory Management System
 Simple IO inventory management system developed for the CS Department at Tec de Monterrey, CEM
 
+## Design and development
+- Roberto Martínez Román
+- Iván Arana Solares
+- Jordan González Bustamante
+
+
 ## What can we found?
 So far...
 - [x] Log in
