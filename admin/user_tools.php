@@ -18,7 +18,7 @@ function login($email, $password){
                   $_SESSION["user_type"] = $result_data["type"];
             }
       }
-      return array($error, $message);
+      return array("success"=>$error, "message"=>$message);
 }
 
 function logout(){

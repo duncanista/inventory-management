@@ -15,16 +15,19 @@
                               <a class="nav-link" href="<?=SITE;?>/inventory">Inventario</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="#">Entradas</a>
+                              <a class="nav-link" href="<?=SITE;?>/movement">Movimientos</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="#">Salidas</a>
+                              <a class="nav-link" href="<?=SITE;?>/movement/entry">Entradas</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="<?=SITE;?>/movement/out">Salidas</a>
                         </li>
                         <li class="nav-item">
                               <a class="nav-link disabled" href="#">Conteo Cíclico</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="#">Reportes</a>
+                              <a class="nav-link" href="<?=SITE;?>/reports">Reportes</a>
                         </li>
                   <?php endif; ?>
                   
