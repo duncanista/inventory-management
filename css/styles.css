@@ -1,0 +1,58 @@
+/* general */
+body, html{
+      height: 100%;
+}
+a{
+      text-decoration: none;
+      color: black;
+}
+a:hover{
+      text-decoration: none;
+      color: black;
+      opacity: 0.5;
+}
+.navbar{
+      font-weight: lighter;
+}
+.bold{
+      font-weight: bold;
+}
+
+/* generic class for main container*/
+.pois{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+}
+.pois-invalid{
+      border: 1.5px solid #cc0000;
+      box-shadow: 0px 10px 10px -15px #993030;
+}
+
+/* mobile upper-right button */
+button.navbar-toggler{
+      border: 0px;
+}
+button.navbar-toggler:focus{
+      outline-color: #f8f9fa;
+}
+/* log-in */
+.log-in{
+      top: 50%;
+}
+.log-in > button, .form-group > label, input, small{
+      font-weight: lighter;
+}
+.log-in > button{
+      width: 100%;
+      border-radius: 3px;
+      margin-top: 2vh;
+}
+.form-group > label{
+      font-size: 3vh;
+}
+.form-group > input{
+      border-radius: 3px;
+}
+.form-group > small{
+      color: #993030;
+}

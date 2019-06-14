@@ -28,7 +28,7 @@ CREATE TABLE transaction_type(
 );
 
 CREATE TABLE user(
-      id INT NOT NULL PRIMARY KEY,
+      id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
       name VARCHAR(100),
       lastname VARCHAR(100),
       email VARCHAR(100),
