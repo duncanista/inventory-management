@@ -1,0 +1,12 @@
+RewriteEngine On
+Options All -Indexes
+#ErrorDocument 404 /home
+#ErrorDocument 403 /home
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Root Rewrites
+RewriteRule ^home$ index.php [L,NC]
+RewriteRule ^logout$ logout.php [L,NC]
+RewriteRule ^inventory$ inventory.php [L,NC]

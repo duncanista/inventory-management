@@ -1,7 +1,7 @@
 <?php 
+session_start();
 $path = dirname(dirname(__FILE__));
 include $path . "/config/config.php";
-
 ?>
 
 <!DOCTYPE html>

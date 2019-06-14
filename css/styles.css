@@ -11,7 +11,7 @@ a:hover{
       color: black;
       opacity: 0.5;
 }
-.navbar{
+.navbar, .light{
       font-weight: lighter;
 }
 .bold{

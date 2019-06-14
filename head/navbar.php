@@ -8,11 +8,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="<?=SITE;?>">Inicio</a>
                   </li>
-                  <?php if(isset($_SESSION["data"])): ?>
+                  <?php if(isset($_SESSION["user"])): ?>
                         <li class="nav-item">
-                              <a class="nav-link" href="#">Inventario</a>
+                              <a class="nav-link" href="<?=SITE;?>/inventory">Inventario</a>
                         </li>
                         <li class="nav-item">
                               <a class="nav-link" href="#">Entradas</a>
@@ -32,7 +32,7 @@
             <hr>
             <div class="my-2 my-lg-0">
                   <?php if(isset($_SESSION["user"])): ?>
-                        <a href="">Cerrar Sesión</a>
+                        <a href="<?=SITE;?>/logout">Cerrar Sesión</a>
                   <?php endif; ?>
             </div>
       </div>

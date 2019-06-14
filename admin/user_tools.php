@@ -1,6 +1,7 @@
 <?php
 $path = dirname(dirname(__FILE__));
 include $path . "/config/connection.php";
+include $path . "/config/config.php";
 
 function login($email, $password){
       session_start();
@@ -18,6 +19,23 @@ function login($email, $password){
             }
       }
       return array($error, $message);
+}
+
+function logout(){
+      session_start();
+      session_destroy();
+}
+
+function isLogged(){
+      session_start();
+      $logged = false;
+      if(isset($_SESSION["user"])){
+            $logged = true;
+      }
+      return $logged;
+}
+function redirect(){
+      echo "<script> window.location.href = '" . SITE . "'; </script>";
 }
 
 if(isset($_POST["email"]) && isset($_POST["pass"])){
