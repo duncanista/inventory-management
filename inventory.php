@@ -12,6 +12,7 @@ if(!$logged){
 <div class="container pois">
       <h1 class="light">Inventario</h1>
       <hr>
+      <?php include $path . "/admin/fetch/inventory.php"; ?>
 
 </div>
 <?php

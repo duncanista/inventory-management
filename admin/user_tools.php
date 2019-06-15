@@ -20,12 +20,10 @@ function login($email, $password){
       }
       return array("success"=>$error, "message"=>$message);
 }
-
 function logout(){
       session_start();
       session_destroy();
 }
-
 function isLogged(){
       session_start();
       $logged = false;
@@ -37,7 +35,6 @@ function isLogged(){
 function redirect(){
       echo "<script> window.location.href = '" . SITE . "'; </script>";
 }
-
 if(isset($_POST["email"]) && isset($_POST["pass"])){
       $email = $_POST["email"];
       $password = $_POST["pass"];

@@ -1,0 +1,21 @@
+<?php
+$query = "SELECT t.id, i.descript AS item, CONCAT(u.name, ' ', u.lastname) AS user, tt.type, t.date_transaction 
+          FROM transaction AS t 
+          INNER JOIN inventory AS i ON t.item = i.id
+          INNER JOIN transaction_type AS tt ON t.id = tt.id
+          INNER JOIN user AS u ON t.user = u.id";
+$result = simpleQuery($query);
+?>
+<div class="row">
+      <div class="col">
+      <?php while($transaction = $result->fetch_assoc()): ?>
+            <p>
+                  <?= $transaction["id"]; ?> <br>
+                  <?= $transaction["item"]; ?> <br>
+                  <?= $transaction["user"]; ?> <br>
+                  <?= $transaction["type"]; ?> <br>
+                  <?= $transaction["date_transaction"]; ?>
+            </p>
+      <?php endwhile; ?>
+      </div>
+</div>

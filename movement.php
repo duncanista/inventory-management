@@ -8,10 +8,12 @@ if(!$logged){
       redirect();
 }
 $label = "Movimientos";
+$movement = true;
+$entry = false;
+$out = false;
 if(isset($_GET["action"])){
       $action = $_GET["action"];
-      $entry = false;
-      $out = false;
+      $movement = false;
       if($action == "entry"){
             $entry = true;
             $label = "Entradas";
@@ -23,8 +25,15 @@ if(isset($_GET["action"])){
 
 ?>
 <div class="container pois">
-      <h1 class="light"><?=$label ?></h1>
+      <h1 class="light"><?=$label;?></h1>
       <hr>
+      <?php if($movement): ?>
+            <?php include $path . "/admin/fetch/movement.php"; ?>
+      <?php elseif($entry): ?>
+            <?php include $path . "/admin/fetch/entry.php"; ?>
+      <?php elseif($out): ?>
+            <?php include $path . "/admin/fetch/out.php"; ?>
+      <?php endif; ?>
 
 </div>
 <?php
