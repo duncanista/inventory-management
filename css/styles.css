@@ -23,6 +23,9 @@ a:hover{
       margin-top: 5vh;
       margin-bottom: 5vh;
 }
+.pois-col{
+      margin-bottom: 3vh;
+}
 .pois-invalid{
       border: 1.5px solid #cc0000;
       box-shadow: 0px 10px 10px -15px #993030;
@@ -39,10 +42,10 @@ button.navbar-toggler:focus{
 .log-in{
       top: 50%;
 }
-.log-in > button, .form-group > label, input, small{
+.log-in, .transaction > button, .form-group > label, input, small{
       font-weight: lighter;
 }
-.log-in > button{
+.log-in, .transaction > button{
       width: 100%;
       border-radius: 3px;
       margin-top: 2vh;
@@ -55,4 +58,8 @@ button.navbar-toggler:focus{
 }
 .form-group > small{
       color: #993030;
+}
+/* transaction */
+.transaction > button{
+      
 }
