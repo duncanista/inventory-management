@@ -37,6 +37,7 @@ include "head/navbar.php";
             </div>
       <?php endif; ?>
 </div>
+<script src="<?=SITE; ?>/js/functions.js"></script>
 <script src="<?=SITE; ?>/js/login.js"></script>
 <?php
 include "foot/footer.php";

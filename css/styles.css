@@ -17,6 +17,9 @@ a:hover{
 .bold{
       font-weight: bold;
 }
+.center{
+      text-align: center;
+}
 
 /* generic class for main container*/
 .pois{
@@ -60,6 +63,3 @@ button.navbar-toggler:focus{
       color: #993030;
 }
 /* transaction */
-.transaction > button{
-      
-}

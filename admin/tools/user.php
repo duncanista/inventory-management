@@ -1,5 +1,5 @@
 <?php
-$path = dirname(dirname(__FILE__));
+$path = dirname(dirname(dirname(__FILE__)));
 include $path . "/config/connection.php";
 include $path . "/config/config.php";
 

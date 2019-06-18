@@ -1,7 +1,8 @@
 <?php
 include "head/header.php";
 include "head/navbar.php";
-include "admin/user_tools.php";
+include "admin/tools/user.php";
+
 
 $logged = isLogged();
 if(!$logged){
@@ -36,6 +37,8 @@ if(isset($_GET["action"])){
       <?php endif; ?>
 
 </div>
+<script src="<?=SITE; ?>/js/functions.js"></script>
+<script src="<?=SITE; ?>/js/update.js"></script>
 <?php
 include "foot/footer.php";
 ?>

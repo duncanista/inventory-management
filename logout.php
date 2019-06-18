@@ -1,7 +1,7 @@
 <?php
 include "head/header.php";
 include "head/navbar.php";
-include "admin/user_tools.php";
+include "admin/tools/user.php";
 
 $logged = isLogged();
 if($logged){

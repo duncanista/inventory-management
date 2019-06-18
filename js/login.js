@@ -1,15 +1,5 @@
 const url = "http://localhost:8888/inventory-management";
 
-function validEmail(email) {
-      var format = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return (format.test(email));
-}
-function validClass(someInput){
-      someInput.removeClass("pois-invalid").addClass("pois-valid");
-}
-function invalidClass(someInput){
-      someInput.removeClass("pois-valid").addClass("pois-invalid");
-}
 
 $('#email').on('input', function(){
       var input = $(this);
@@ -66,7 +56,7 @@ $("#submit_login").click(function(event){
       }else{
             event.preventDefault();
             $.ajax({
-                  url: url + "/admin/user_tools.php",
+                  url: url + "/admin/tools/user.php",
                   method: "POST",
                   data: {email: emailVal, pass: passVal},
                   dataType: "json",
