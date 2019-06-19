@@ -14,6 +14,9 @@
                         <li class="nav-item">
                               <a class="nav-link" href="<?=SITE;?>/inventory">Inventario</a>
                         </li>
+                        <li class="nav-item d-block d-sm-none">
+                              <a class="nav-link" href="<?=SITE;?>/inventory/add">Añadir Producto</a>
+                        </li>
                         <li class="nav-item">
                               <a class="nav-link" href="<?=SITE;?>/movement">Movimientos</a>
                         </li>

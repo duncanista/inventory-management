@@ -15,5 +15,5 @@
             </div>
       </div>
       <small id="login_info"></small>
-      <button type="submit" class="btn btn-dark btn-lg" id="submit_update">Añadir inventario</button>
+      <button type="submit" class="btn btn-dark btn-lg" id="submit_update">Guardar inventario</button>
 </form>

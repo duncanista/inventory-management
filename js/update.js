@@ -1,26 +1,30 @@
 const url = "http://localhost:8888/inventory-management";
 
-function isBarcode(barcode, input, label, quantity){
-      var success = false;
+function isBarcode(barcode, input, label, quantity, buttons){
       $.ajax({
             url: url + "/admin/tools/inventory.php",
             method: "POST",
             data: {barcodeCheck: true, barcode: barcode},
             dataType: "json",
             success:function(response){
-                  if(response.error){
+                  quantity.val(response.quantity);
+                  if(!response.success){
                         invalidClass(input);
                         label.html(response.message);
+                        invalidClass(quantity);
+                        buttons.find('input, button').attr('disabled', true);
+                        buttons.find('button').addClass("pois-invalid")
                   }else{
                         validClass(input);
+                        validClass(quantity)
                         label.html("");
-                        success = true;
+                        buttons.find('input, button').attr('disabled', false);
+                        buttons.find('button').removeClass("pois-invalid")
                   }
-                  quantity.html(response.quantity);
             }
       });
-      return success;
 }
+
 $('#update_group').find('input, button').attr('disabled', true);
 
 $('#barcode').on('input', function(){
@@ -28,23 +32,33 @@ $('#barcode').on('input', function(){
       var label = $('#barcode_info');
       var barcode = input.val();
       var quantity = $('#quantity');
+      var buttons = $('#update_group');
+
       if(barcode == ''){
             invalidClass(input);
             label.html('Debes ingrear un código de barras.');
-      }else if(!isBarcode(barcode, input, label, quantity)){
-            var b = true;
+      }else{
+            isBarcode(barcode, input, label, quantity, buttons);
       }
 });
 
 $("#submit_update").click(function(event){
       var barcode = $("#barcode");
-      var labelBarcode = $("#barcode_info");
+      var label = $("#barcode_info");
       var barcodeVal = barcode.val();
+      var buttons = $('#update_group');
+      var quantity = $('#quantity');
       var error = false;
       if(barcodeVal == ''){
             invalidClass(barcode);
-            labelBarcode.html("Debes ingresar un código de barras.");
+            invalidClass(quantity);
+            label.html("Debes ingresar un código de barras.");
+            buttons.find('input, button').attr('disabled', true);
+            buttons.find('button').addClass("pois-invalid");
+            
             error = true;
+      }else{
+            
       }
 
       if (error){
