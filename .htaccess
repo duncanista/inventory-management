@@ -10,6 +10,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^home$ index.php [L,NC]
 RewriteRule ^logout$ logout.php [L,NC]
 RewriteRule ^inventory$ inventory.php [L,NC]
+RewriteRule ^inventory/add$ inventory.php?action=add [L,NC]
 RewriteRule ^movement$ movement.php [L,NC]
 RewriteRule ^reports$ reports.php [L,NC]
 RewriteRule ^movement$ movement.php [L,NC]

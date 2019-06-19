@@ -26,7 +26,17 @@ if(isset($_GET["action"])){
 
 ?>
 <div class="container pois">
-      <h1 class="light"><?=$label;?></h1>
+      <div class="pois-flex row">
+            <div class="col-12 col-md-7 col-lg-9">
+                  <h1 class="light"><?=$label;?></h1>
+            </div>
+            <?php if($entry):?>
+                  <div class="d-none d-sm-block col-md-5 col-lg-3 right">
+                  <a class="btn btn-dark btn-lg light" href="<?=SITE; ?>/inventory/add">Añadir nuevo producto</a>
+                  </div>  
+            <?php endif; ?>  
+      </div>
+      
       <hr>
       <?php if($movement): ?>
             <?php include $path . "/admin/fetch/movement.php"; ?>

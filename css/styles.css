@@ -53,7 +53,7 @@ button.navbar-toggler:focus{
 .log-in{
       top: 50%;
 }
-.log-in, .transaction > button, .form-group > label, input, small{
+.log-in, .transaction > button, .form-group > label, input, small, select{
       font-weight: lighter;
 }
 .log-in, .transaction > button{

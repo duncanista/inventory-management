@@ -1,7 +1,17 @@
 <?php
 $path = dirname(dirname(dirname(__FILE__)));
-include $path . "/config/connection.php";
-include $path . "/config/config.php";
+include_once $path . "/config/connection.php";
+include_once $path . "/config/config.php";
+
+function getSuppliers(){
+      $query = "SELECT * FROM supplier";
+      if($result = simpleQuery($query)){
+            if($result->num_rows > 0){
+                  $data = $result;
+            }
+      }   
+      return $data;   
+}
 
 function isBarcode($barcode){
       $success = false;

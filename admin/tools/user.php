@@ -1,7 +1,7 @@
 <?php
 $path = dirname(dirname(dirname(__FILE__)));
-include $path . "/config/connection.php";
-include $path . "/config/config.php";
+include_once $path . "/config/connection.php";
+include_once $path . "/config/config.php";
 
 function login($email, $password){
       session_start();
