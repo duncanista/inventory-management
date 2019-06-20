@@ -13,7 +13,7 @@ So far...
 - [x] Inventory
 - [x] Add product (front-end)
 - [x] Ins and outs (front-end)
-- [ ] Cyclic counting
+- [ ] Cyclic counting (will not be implemented)
 - [ ] Reports
 
 ## Contributing
