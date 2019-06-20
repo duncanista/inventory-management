@@ -3,8 +3,8 @@ $path = dirname(dirname(dirname(__FILE__)));
 include_once $path . "/config/connection.php";
 include_once $path . "/config/config.php";
 
-function getSuppliers(){
-      $query = "SELECT * FROM supplier";
+function getTable($table){
+      $query = "SELECT * FROM $table";
       if($result = simpleQuery($query)){
             if($result->num_rows > 0){
                   $data = $result;
@@ -12,6 +12,7 @@ function getSuppliers(){
       }   
       return $data;   
 }
+
 
 function isBarcode($barcode){
       $success = false;

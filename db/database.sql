@@ -3,7 +3,7 @@ CREATE DATABASE iosys;
 USE iosys;
 
 CREATE TABLE supplier(
-      id INT NOT NULL PRIMARY KEY,
+      id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
       company VARCHAR(200)
 );
 

@@ -43,6 +43,7 @@ if(isset($_GET["action"])){
       <?php endif; ?>
 
 </div>
+<script src="<?=SITE; ?>/js/add.js"></script>
 <?php
 include "foot/footer.php";
 ?>
