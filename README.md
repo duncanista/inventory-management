@@ -10,8 +10,9 @@ Simple IO inventory management system developed for the CS Department at Tec de 
 ## What can we found?
 So far...
 - [x] Log in
-- [ ] Inventory
-- [ ] Ins and outs
+- [x] Inventory
+- [x] Add product (front-end)
+- [x] Ins and outs (front-end)
 - [ ] Cyclic counting
 - [ ] Reports
 
