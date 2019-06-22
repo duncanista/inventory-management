@@ -16,15 +16,27 @@ $result = simpleQuery($query);
 <hr>
 <div class="row">
       <div class="col">
-      <?php while($transaction = $result->fetch_assoc()): ?>
-            <p>
-                  <?= $transaction["id"]; ?> <br>
-                  <?= $transaction["item"]; ?> <br>
-                  <?= $transaction["user"]; ?> <br>
-                  <?= $transaction["type"]; ?> <br>
-                  <?= $transaction["date_transaction"]; ?> <br>
-                  <?= $transaction["quantity"]; ?>
-            </p>
-      <?php endwhile; ?>
+            <table class="table table-borderless light pois-table">
+                  <thead>
+                        <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Producto</th>
+                              <th scope="col">Usuario</th>
+                              <th scope="col">Fecha</th>
+                              <th scope="col">Se ingresaron</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                  <?php while($transaction = $result->fetch_assoc()): ?>
+                  <tr>
+                        <th scope="row"><?= $transaction["id"]; ?> </th>
+                        <td> <?= $transaction["item"]; ?> </td>
+                        <td> <?= $transaction["user"]; ?> </td>
+                        <td> <?= $transaction["date_transaction"]; ?> </td>
+                        <td> <?= $transaction["quantity"]; ?> </td>
+                  </tr>
+                  <?php endwhile; ?>
+                  </tbody>
+            </table>
       </div>
 </div>

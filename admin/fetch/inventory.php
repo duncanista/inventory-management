@@ -1,5 +1,8 @@
 <?php
-$query = "SELECT * FROM inventory";
+$query = "SELECT i.id, i.descript, s.company AS supplier, i.cost, i.sell, i.reposition, i.storage, i.caducation, i.unit, i.quantity FROM inventory AS i INNER JOIN supplier AS s ON i.supplier = s.id;
+
+
+";
 $result = simpleQuery($query);
 ?>
 <div class="row">

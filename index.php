@@ -12,7 +12,7 @@ include "head/navbar.php";
                   </p>
                   <hr class="my-4">
                   <p>Tecnológico de Monterrey, Campus Estado de México.</p>
-                  <a class="btn btn-primary btn" href="#" role="button">Ver inventario</a>
+                  <a class="btn btn-primary btn" href="<?=SITE;?>/inventory" role="button">Ver inventario</a>
             </div>
       <?php else: ?>
             <div class="row align-items-center">

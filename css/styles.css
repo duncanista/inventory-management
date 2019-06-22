@@ -41,6 +41,9 @@ a:hover{
 .pois-col{
       margin-bottom: 3vh;
 }
+.pois-table > thead > tr > th, .pois-table > tbody > tr > td, .pois-table > tbody > tr > th{
+      padding: 5px;
+}
 .pois-invalid, .pois-invalid:focus{
       border: 1.5px solid #cc0000;
       box-shadow: 0px 10px 10px -15px #993030;
