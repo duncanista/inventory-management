@@ -7,7 +7,7 @@ Simple IO inventory management system developed for the CS Department at Tec de 
 - Jordan González Bustamante
 
 
-## What can we found?
+## What can we find?
 So far...
 - [x] Log in
 - [x] Inventory
